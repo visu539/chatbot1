@@ -1,0 +1,10 @@
+{
+  "advisors": [
+    {"username": "advisor1", "password": "Passw0rd!", "email": "advisor1@example.com", "first_name": "A1", "last_name": "User"},
+    {"username": "admin", "password": "AdminPassw0rd!", "email": "admin@example.com", "first_name": "Admin", "last_name": "User", "role": "ADMIN"}
+  ],
+  "clients": [
+    {"name": "John Doe", "contact": "+1-555-1234", "email": "john@example.com", "stage": "Active", "probability": 90, "expected_investment": 500000.00, "notes": "HNI"},
+    {"name": "Jane Smith", "contact": "+1-555-5678", "email": "jane@example.com", "stage": "Prospect", "probability": 60, "expected_investment": 200000.00, "notes": "Tech professional"}
+  ]
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Proposal</title>
+    <style>
+      body { font-family: DejaVu Sans, sans-serif; }
+      h1 { font-size: 18px; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { border: 1px solid #ddd; padding: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Proposal {{ proposal.id }}</h1>
+    <p>Client: {{ proposal.client.name }}</p>
+    <p>Advisor: {{ proposal.advisor.get_full_name|default:proposal.advisor.username }}</p>
+    <p>Status: {{ proposal.status }}</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Fund Name</th>
+          <th>Allocation %</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in proposal.items.all %}
+        <tr>
+          <td>{{ item.fund_name }}</td>
+          <td>{{ item.allocation_percent }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
